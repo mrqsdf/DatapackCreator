@@ -1,5 +1,6 @@
 package fr.mrqsdf.advancement.criteria;
 
+import fr.mrqsdf.advancement.conditions.Conditions;
 import fr.mrqsdf.advancement.conditions.LegacyConditions;
 
 import java.util.HashMap;
@@ -12,12 +13,6 @@ public class AvoidVibration extends Criteria{
         this.conditions = new HashMap<>(){{
             put("player",playerLegacy);
         }};
-    }
-
-    public Map<String, LegacyConditions> conditions;
-
-    public Map<String, LegacyConditions> getConditions() {
-        return conditions;
     }
 
 }

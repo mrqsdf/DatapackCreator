@@ -11,11 +11,6 @@ public class AdvancementSerialisation implements JsonSerializer<Advancement> {
         JsonObject result = new JsonObject();
         result.add("display", context.serialize(src.getDisplay()));
         result.add("parent", context.serialize(src.getParent()));
-        /*JsonObject conditions = new JsonObject();
-        for (String key : src.getCriteria().keySet()){
-            conditions.add(key, context.serialize(src.getCriteria().get(key)));
-        }
-        result.add("criteria", conditions);*/
         result.add("criteria", context.serialize(src.getCriteria()));
         result.add("requirements", context.serialize(src.getRequirements()));
         result.add("rewards", context.serialize(src.getRewards()));

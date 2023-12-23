@@ -28,7 +28,7 @@ public class DatapackCreatorLib {
         DATAPACK_VERSION = datapackVersion;
         DatapackCreatorLib.isBukkit = isBukkit;
         Map<String, Criteria> criteriaMap = new HashMap<>();
-        criteriaMap.put("test", new AllayDropItemOnBlock(new LegacyConditions()));
+        criteriaMap.put("test", new AllayDropItemOnBlock(new LegacyConditions(), new LegacyConditions()));
         Advancement advancementTest = new Advancement("test",new Display("title", "description", "test", new Icon(), BackGround.BEDROCK, Frame.TASK, true, true, false),"minecraft:story/root", criteriaMap, null,null,false);
         ADVANCEMENTS.add(advancementTest);
         if (!isBukkit){
